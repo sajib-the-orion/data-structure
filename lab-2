@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int num;
+    int n=6;
+    int arr[]={3, 4, 6, 7, 8, 9};
+    printf("The array of Data:\n");
+    for(int i=0; i<n; i++)
+    {
+        printf("arr[%d]=%d\n", i, arr[i]);
+    }
+    printf("Which number you want to delete?\n");
+
+    scanf("%d", &num);
+
+    while(num<n)
+    {
+        arr[num-1]=arr[num];
+        num++;
+    }
+    n-=1;
+
+    printf("The array of data after deletion:\n");
+    for(int i=0; i<n; i++)
+    {
+        printf("arr[%d]=%d\n", i, arr[i]);
+    }
+    return 0;
+
+}
